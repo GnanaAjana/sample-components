@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  	  <script data-require="angular.js@1.2.27" data-semver="1.2.27" src="https://code.angularjs.org/1.2.27/angular.js"></script>
+       <!--script type="text/javascript" src="js/main.js"></script>-->
+       <link rel="stylesheet" href="css/style.css" />
+  	</head>
+  	<body ng-app>
+  		<h1>Basic operations in Angular</h1>
+  		<p></p>
+  		<div >
+  			<input type="text" name="op-1" placeholder="Enter operand-1" ng-model="firstValue">
+        <input type="text" name="op-2" placeholder="Enter operand-2" ng-model="secondValue">
+  		</div>
+      <!-- ng-show check both input box have values  -->
+      <div ng-show = firstValue&&secondValue class="result_div">
+         <h4>Results</h4>
+         <div class="inner_div">
+            <p>Add</p>
+            <!-- multiply by 1 is typecasting , because in angular + will do string concatenation -->
+            <p> {{firstValue*1 + secondValue*1}} </p>
+         </div>
+          <div class="inner_div">
+            <p>Sub</p>
+            <p>{{firstValue - secondValue }}</p>
+         </div>
+          <div class="inner_div">
+            <p>Multiply</p>
+            <p>{{firstValue * secondValue }}</p>
+         </div>
+          <div class="inner_div">
+            <p>Division</p>
+            <!-- filter is used after | (pipe symbol) show two digits after decimal-->
+            <p>{{firstValue / secondValue | number:2}}</p>
+         </div>
+
+      </div>
+  	</body>
+
+</html>
