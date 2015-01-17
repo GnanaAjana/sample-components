@@ -1,0 +1,1 @@
+The purpose of this repo is learning Angular by doing small task.
