@@ -1,0 +1,33 @@
+body{
+background-color: rgb(238, 242, 237);
+}
+div.container
+{
+	width:100%;
+}
+div#commonDetails
+{
+	display:table;
+}
+div#row
+{
+	display:table-row;
+}
+.lbl,.lblVal
+{
+	display:table-cell;
+}
+#tableContainer table
+{
+	border:1px solid black;
+	border-collapse:collapse;
+	margin:2px;
+}	
+caption
+{
+	text-align:left;
+}	
+#tableContainer td
+{			
+	padding:8px;
+}

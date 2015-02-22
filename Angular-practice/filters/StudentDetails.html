@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</head>
+	<body> 
+			<div class="container" ng-app="studentapp"  ng-controller="studentController">
+					<p><h2>{{student.title |uppercase}}</h2></p>
+					<div id="commonDetails">
+						<div id="row">
+							<p><label class="lbl">Name: </label><span class="lblVal" ng-bind="student.fullName()"></span></p>
+							<p><label class="lbl">Gender: </label><span class="lblVal" ng-bind="student.gender"></span></p>
+							<p><label class="lbl">Email: </label><span class="lblVal" ng-bind="student.email"></span></p>
+							<p><label class="lbl">Phone: </label><span class="lblVal" ng-bind="student.phoneNo"></span></p>		
+						</div>		
+					</div>
+					<div id="tableContainer">
+						<table>
+						<caption><h3>Subject Details:<h3></caption>
+							<tr>
+								<td>Enter subject to filter</td>
+								<td><input type="text"  ng-model="filterSubName"/></td>
+							</tr>
+								<td colspan="2"><b>Subject:</b></td></tr>
+							<tr>
+								<td><b>Subject Name</b></td>
+								<td><b>Mark</b></td>
+							</tr>
+							<!--iterate subjects array in the controller-->
+							<tr ng-repeat="subject in student.subjects | filter:filterSubName | orderBy:'mark'">
+								<td>{{subject.subName}}</td>
+								<td>{{subject.mark}}</td>										
+							</tr>						
+						</table>
+					</div>
+			</div>				
+	</body>
+
+</html>
