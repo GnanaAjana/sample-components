@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TreeNode Try</title>
+    <script src="jquery-1.8.3.min.js" type="text/javascript"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+    <div class="container">
+        <div class="acc">
+            <ul class="accui" id="mainui">
+                <li id="topli1" class="topLi"><a id="tli1" href="#ui1" title="accordian1">accordian1</a>
+                    <ul class="subui" id="ui1">
+                        <li id="ui1li1">acc1</li>
+                        <li id="ui1li2">acc2</li>
+                        <li id="ui1li3">acc3</li>
+                    </ul>
+                </li>
+                <li id="topli2" class="topLi"><a id="tli2" href="#ui2" title="accordian2">accordian2</a>
+                    <ul class="subui" id="ui2">
+                        <li id="ui2li1">acc1</li>
+                        <li id="ui2li2">acc2</li>
+                        <li id="ui2li3">acc3</li>
+                    </ul>
+                </li>
+                <li id="topli3" class="topLi"><a id="tli3" href="#ui3" title="accordian3">accordian3</a>
+                    <ul class="subui" id="ui3">
+                        <li id="ui3li1">acc1</li>
+                        <li id="ui3li2">acc2</li>
+                        <li id="ui3li3">acc3</li>
+                    </ul>
+                </li>
+                <li id="topli4" class="topLi"><a id="tli4" href="#ui4" title="accordian4">accordian4</a>
+                    <ul class="subui" id="ui4">
+                        <li id="ui4li1">acc1</li>
+                        <li id="ui4li2">acc2</li>
+                        <li id="ui4li3">acc3</li>
+                    </ul>
+                </li>
+                <li id="topli5" class="topLi"><a id="tli5" href="#ui5" title="accordian5">accordian5</a>
+                    <ul class="subui" id="ui5">
+                        <li id="ui5li1">acc1</li>
+                        <li id="ui5li2">acc2</li>
+                        <li id="ui5li3">acc3</li>
+                    </ul>
+                </li>
+                <li class="topLi" id="topli6">accordian6</li>
+            </ul>
+        </div>
+        <div id="fade" class="black_overlay">
+        </div>
+        <div id="popContainer">
+        </div>
+        <div id="addoreditPop" class="white_content" style="display: none">
+            <span style="color: Gray;"><b>Select your option:</b><br />
+                <br />
+            </span>
+            <ol id="addoreditPopLi">
+            </ol>
+            <br />
+            <input type="button" class="cancel" id="addoreditPopClose" value="Cancel" onclick="enableBackgound();document.getElementById('addoreditPop').style.display='none';" /><br />
+            <br />
+            <input type="hidden" id='hiddenID' />
+        </div>
+        <div id="addContent" class="white_content" style="display: none">
+            <span>click add to add sub li element:</span>
+            <br />
+            <input class="liValues" id="addtxtLi" type="button" value="Add" onclick="enabletxtdiv()" />
+            <input class="liValues" id="btnAddClose" type="button" value="Cancel" onclick="addsubLiClose();enableBackgound()" />
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
