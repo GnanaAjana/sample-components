@@ -2,15 +2,36 @@
 <html>
 	<head>
   	  <script data-require="angular.js@1.2.27" data-semver="1.2.27" src="https://code.angularjs.org/1.2.27/angular.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
   	</head>
-  	<body>
-  		<h1>Wlecome To Angular</h1>
+  	<body ng-app>
+  		<h1>Basic operations in Angular</h1>
   		<p></p>
-  		<div ng-app>
-        <p>value 1</p>
-  			<input type="text" name="holder" placeholder="Type anything" ng-model="inputValue">
-  			<p>{{inputValue}} </p>
+  		<div >
+        <p>value 1:</p>
+  			<input type="text" name="op-1" placeholder="Enter operand-1" ng-model="firstValue">
+        <input type="text" name="op-2" placeholder="Enter operand-2" ng-model="secondValue">
   		</div>
+      <div>
+         <h4>Results</h4>
+         <div>
+            <p>Add</p>
+            <p>{{ firstValue + secondValue }}</p>
+         </div>
+          <div>
+            <p>Sub</p>
+            <p>{{firstValue - secondValue }}</p>
+         </div>
+          <div>
+            <p>Multiply</p>
+            <p>{{firstValue * secondValue }}</p>
+         </div>
+          <div>
+            <p>Division</p>
+            <p>{{firstValue / secondValue | number}}</p>
+         </div>
+
+      </div>
   	</body>
 
 </html>
